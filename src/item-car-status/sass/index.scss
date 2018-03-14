@@ -1,0 +1,203 @@
+@import "../../base-common/css/common";
+
+body {
+    background: #f0eff4;
+}
+
+#carStatus{
+	min-height: 100%;
+}
+/*底部文字*/
+.bottomCaption{
+    width: 100%;
+    line-height: 20px;
+    text-align: center;
+    .content{
+        padding:30px 0 20px 0;
+    }
+}
+
+/*评论成功弹窗*/
+.commentSuccess{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    display: none;
+    z-index:3;
+    .successBox{
+        width: 72%;
+        margin: 50% auto;
+        background-color: #fff;
+        border-radius: 5px;
+        padding-top: 20px;
+        img{
+            width: 50px;
+            margin-bottom: 10px;
+        }
+        p:nth-child(4){
+            margin-top:5px;
+            height: 44px;
+            line-height: 44px;
+        }
+    }
+    &.show{
+        display: block;
+    }
+}
+/*有vn*/
+.carVN{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    display: none;
+    .carVNTopBox{
+        position: relative;
+        padding:20px 0;
+        background: #f0f0f0;
+        .circle{
+            width: 90px;
+            height: 90px;
+            margin: 7px auto;
+            border:9px solid #d1d9e0;
+            border-radius: 50%;
+            span{
+                line-height: 70px;
+                letter-spacing:-7px;
+            }
+            span:nth-child(1){
+                color: #d1d9e0;
+                font-size: 3.1875rem;
+            }
+        }
+        svg{
+            position: absolute;
+            right: 3%;
+            top: 10px;
+            width: 19px;
+            height: 19px;
+            fill:#666666;
+        }
+    }
+    .carVNBottomBox{
+        padding-bottom:30px;
+        background: #ffffff;
+        a{
+            display: inline-block;
+            height: 48px;
+            width: 82.7%;
+            background-color: #2c9afe;
+            color: #fff;
+            line-height: 48px;
+            margin: 20px auto;
+        }
+    }
+    &.show{
+        display: block;
+        animation: carVN .5s  forwards;
+    }
+
+    @-webkit-keyframes carVN {
+        0% {
+            bottom:-60%;
+        }
+        100% {
+            bottom:0%;
+        }
+    }
+}
+
+#baiduMap{
+    width: 100%;
+    overflow: hidden;
+}
+
+.selectCar,.selectCity{
+    position: absolute;
+    right: 3%;
+    top:54px;
+    display: inline-block;
+    width: 140px;
+    max-height: 250px;
+    border-radius: 5px;
+    border:1px solid #cccccc;
+    background: #fff;
+    text-align: center;
+    padding: 0 15px;
+    z-index: 100;
+    overflow: auto; 
+    .cusp{
+        position: absolute;
+        top: -6px;
+        right: 10%;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid #cccccc;
+        border-left: 1px solid #cccccc;
+        background: #ffffff;
+        transform: rotateZ(45deg);
+    }
+    .carLi,.cityLi{
+        width: 100%;
+        padding: 0;
+    }
+    .carLi:last-child::before{
+        display: none;
+    }
+    .carSelect,.citySelect {
+        animation: select .5s  forwards;
+    }
+
+    @-webkit-keyframes select {
+        0% {
+            line-height: 0.75rem;
+        }
+        100% {
+            line-height: 40px;
+        }
+    }
+    &.none{
+        display: none;
+    }
+}
+.selectCity{
+    width: 100px;
+    right: 11%;
+}
+.shareMount{
+    display: none;
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    img{
+        position: fixed;
+        display: inline-block;
+        right: 30px;
+        top:20px;
+        width: 70px;
+    }
+    .content{
+        margin-top: 120px;
+    }
+    p{
+        color: #fff;
+        font-weight: 500;
+    }
+    &.show{
+        display: block;
+    }
+}
+
+
+@import "./login.scss";
+@import "./carStatus.scss";

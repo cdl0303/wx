@@ -1,0 +1,18 @@
+
+.page-index{
+    position:absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding:0 5%;
+    .btn{
+        margin-top:10px;
+    }
+    .block{
+        margin-top:50px;
+    }
+    .block:first-child{
+        margin-top:0;
+    }
+}

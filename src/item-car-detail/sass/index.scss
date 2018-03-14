@@ -1,0 +1,1175 @@
+@charset "utf-8";
+
+/** common style start **/
+
+@import '../../base-common/css/common';
+$c_2c2c2c:#2c2c2c;
+$c_666:#666;
+$c_999:#999;
+$c_e3e3:#e3e3e3;
+$c_fff:#fff;
+$c_yellow:#feae2c;
+$c_2c9a:#2c9afe;
+$f_18:1.125rem;
+$f_16:1rem;
+$f_14:0.875rem;
+$f_12:0.75rem;
+$f_30:1.75rem;
+body {
+    background: #f0eff4;
+    font-size: 0.875rem;
+    color: #222222;
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+}
+.show{
+	display: block;
+
+}
+.hide{
+	display: none;
+}
+.tc{
+	text-align: center;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.c9{
+	color: $c_999;
+}
+.more-price{
+	font-size: $f_12;
+	.no-price {
+		background-image:url('../images/h5_price.png');background-size: 100%; background-repeat: no-repeat; background-position: center; height:12.3rem;width: 100%;position: absolute;top: 50%;margin-top: -6.15rem;}
+	.price-list{
+		background-color:white; margin-top: 12px;
+		.price-title {padding:0px 10px;font-weight:bolder;font-size:.8rem;height:35px;line-height:35px;}
+		.price-info {
+			padding:0px 10px 10px;
+			clear:both;
+			border-bottom:1px solid #e3e3e3;
+			overflow: hidden;
+			.info-img {
+				float:left;width:6rem;background-size:cover;background-repeat:no-repeat;height:4.5rem;}
+			.info-car {
+				float:left;
+				padding-left:10px;
+				font-size:.7rem;
+				width:12rem;
+				div:nth-child(1){color:#666;height:1rem;line-height:1rem;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+				div:nth-child(2){color:#999;height:1rem;line-height:1rem;}
+				div:nth-child(3){color:#666;height:1.5rem;line-height:1.5rem;}
+				div:nth-child(4){color:#2c9afe;height:1rem;line-height:1.2rem;}
+				i{font-style:inherit;border: 1px solid #666;border-radius: 4px;padding: 2px 4px;margin-right:5px;}
+				.bdblue{border:1px solid #2c9afe;color:#2c9afe;}
+				.green{color:#17a826;}
+				.red{color:#dd6b88;}
+				.blue{color:#2484be;}
+				.yellow{color:#ffc600;}
+			}
+		}
+		.price-bottom{
+			height:30px;line-height:30px;
+			b {display:inline-block;text-align: center;width:43%;}
+			b:nth-child(1) {color:#222;text-align: left;margin-left: 10px;}
+			b:nth-child(2) {width:10%;color:#666;}
+			b:nth-child(3) {color:#2c9afe;}
+		}
+	}
+	.price-list:nth-child(1){margin-top: 0px;}
+}
+.carDetailBox{
+	padding: 40px 0 0 0;
+	position: relative;
+	overflow: hidden;
+	.modal {
+	    position: fixed;
+	    top: 50%;
+	    left: 50%;
+	    margin-left:-25%;
+	    padding: 10px;
+	    background-color: rgba(0, 0, 0, 0.8);
+	    color: $c_fff;
+	    text-align: center;
+	    z-index: 2100;
+	   
+	    border-radius: 5px;
+	}
+	.versonPop{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		z-index: 2200;
+		top:0;
+		left:0;
+		.bg{
+			 background-color: rgba(0, 0, 0, 0.5);
+			 position: absolute;
+			 top:0;
+			 left:0;
+			 width: 100%;
+			 height: 100%;
+		}
+		.versionBox{
+			/*transform: translate3d(-50%,-50%,0);*/
+			position: relative;
+			z-index: 2201;
+			width: 80%;
+			background: $c_fff;
+			border-radius: 5px;
+			margin:40% auto;
+			padding:20px;
+			.versionTit{
+				color: $c_2c2c2c;
+				font-size: $f_16;
+			}
+			.versionTxt{
+				color: #666;
+				font-size: $f_14;
+				padding: 15px 0;
+			}
+			.versionBtn{
+				width: 100%;
+				padding:11px 0;
+				font-size: $f_16;
+				color: $c_fff;
+				margin-top:16px;
+			}
+			.close{
+				display: inline-block;
+				background: url(../images/close.png) no-repeat;
+				background-size: 100%;
+				width: 15px;
+				height: 15px;
+				position: absolute;
+				top:20px;
+				right: 20px
+			}
+		}
+	}
+	.initBox-pagination{
+		display: none;
+	}
+	.downTimeBox{
+		height: 30px;
+		.leftTime{
+			background: #fbf3ce;
+		    position: fixed;
+		    top: 40px;
+		    width: 100%;
+		    height: 30px;
+		    line-height: 30px;
+		    padding-left: 26px;
+		    z-index: 2000;
+		    font-size: $f_12;
+		    em{
+		    	background: url(../images/h5_reward.png) no-repeat center center;
+		    	display: inline-block;
+		    	width: 16px;
+		    	height: 100%;
+		    	background-size: 100%;
+		    	position: absolute;
+		    	left:5px;
+		    	top: 0;
+		    }
+		    .second{
+		    	color: #ff0000
+		    }
+		}
+		.countDownInfo{
+			position: fixed;
+		    width: 100%;
+		    height: 100%;
+		    background: rgba(0,0,0,0.8);
+		    left: 0;
+		    top: 0;
+		    z-index: 21000;
+		    .countDownTxt{
+		    	position: absolute;
+			    top: 40%;
+			    left: 50%;
+			    -webkit-transform: translate3d(-50%,-50%,0);
+			    width: 72%;
+			    background-color: #fff;
+			    border-radius: 8px;
+			    .txt{
+			    	font-size: $f_12;
+				    color: #000000;
+				    border-bottom: 1px solid #e3e3e3;
+				    padding: 20px 15px 25px 15px;
+			    }
+			    .button{
+			    	padding:10px 0;
+			    	color: $c_2c9a;
+			    	text-align: center;
+			    	display: inline-block;
+			    	width: 100%;
+			    }
+		    }
+		}
+	}
+	.countDownRealH{
+		height: 30px;
+
+	}
+	.countDownBox{
+		.leftTime{
+			background: #fbf3ce;
+		    position: fixed;
+		    top: 40px;
+		    width: 100%;
+		    height: 30px;
+		    line-height: 30px;
+		    padding-left: 26px;
+		    z-index: 2000;
+		    font-size: $f_12;
+		    em{
+		    	background: url(../images/h5_reward.png) no-repeat center center;
+		    	display: inline-block;
+		    	width: 16px;
+		    	height: 100%;
+		    	background-size: 100%;
+		    	position: absolute;
+		    	left:5px;
+		    	top: 0;
+		    }
+		    .second{
+		    	color: #ff0000
+		    }
+		}
+		.countDownInfo{
+			position: fixed;
+		    width: 100%;
+		    height: 100%;
+		    background: rgba(0,0,0,0.8);
+		    left: 0;
+		    top: 0;
+		    z-index: 21000;
+		    .countDownTxt{
+		    	position: absolute;
+			    top: 40%;
+			    left: 50%;
+			    -webkit-transform: translate3d(-50%,-50%,0);
+			    width: 72%;
+			    background-color: #fff;
+			    border-radius: 8px;
+			    .txt{
+			    	font-size: $f_12;
+				    color: #000000;
+				    border-bottom: 1px solid #e3e3e3;
+				    padding: 20px 15px 25px 15px;
+			    }
+			    .button{
+			    	padding:10px 0;
+			    	color: $c_2c9a;
+			    	text-align: center;
+			    	display: inline-block;
+			    	width: 100%;
+			    }
+		    }
+		}
+	}
+	
+	
+
+	.picPopBox{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top:0;
+		left: 0;
+		z-index: 2005;
+		.bg{
+			background: #000;
+			z-index: 2006;
+			width: 100%;
+			height: 100%;
+			top:0;
+			left: 0;
+			position: absolute;
+		}
+		.closeIcon{
+			display: inline-block;
+			position: absolute;
+			background: url(../images/closeIcon.png) no-repeat;
+			background-size: 100%;
+			width: 32px;
+			height: 32px;
+			left:50%;
+			bottom:-80px;
+			z-index: 2007;
+			margin-left:-16px;
+		}
+		.mainPics{
+			position: relative;
+			z-index: 2007;
+			width: 100%;		
+			color: $c_fff;
+			margin-top: 35%;
+			img{
+				width: 100%;
+
+			}
+			.slideBgPic{
+				width: 100%;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				height: 260px;
+			}
+			.swiper-container{
+				overflow: inherit;
+			}
+			.swiper-pagination{
+				display: inline-block;
+				width: inherit;
+				left: inherit;
+				bottom: 30px;
+				position: fixed;
+				right: 10px;
+				z-index: 100;
+				font-size: $f_12;
+			}
+			.swiperOut{
+				position: fixed;
+				width: 100%;
+				left: 0;
+				bottom: 10px;
+				z-index: 2010
+			}
+			.itemInfo{
+				
+				padding:0 50px 0 2.5%;
+				width: 100%;
+				font-size: $f_12;
+				
+			}
+		}
+	}
+	
+	.nav{
+		z-index: 2000;
+	    background: $c_fff;
+	    height: 40px;
+	    line-height: 39px;
+	    font-size: $f_14;
+	    position: fixed;
+	    width: 100%;
+	    top:0;
+	    left: 0;
+	    border-bottom: 1px solid $c_e3e3;
+		ul{
+			li{
+				float: left;
+				width: 20%;
+				text-align: center;
+				color: $c_666;
+				position: relative;
+				span{
+					display: block;
+				}
+				.redIcon{
+					position: absolute;
+					width: 6px;
+					height: 6px;
+					border-radius: 100%;
+					background: red;
+					top:10px;
+					right: 10px;
+					display: inline-block;
+				}
+			}
+			li.hover{
+				color:$c_2c9a;
+				border-bottom: 2px solid $c_2c9a
+			}
+		}
+	}
+	.checkHistory{
+
+		.historyPrice{
+			background: url(../images/historyPrice.png) no-repeat;
+			background-size: 100%;
+			width: 92px;
+			height: 63px;
+			position: absolute;
+			left:8px;
+			bottom:-15px;
+			display: inline-block;
+			z-index: 2001
+		}
+	}
+	.btnBg{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.1);
+		top:100%;
+		left:0;
+		z-index: 2001;
+		
+	}
+	.navBtn{
+		.navBtnMenu{
+			position: fixed;
+			width: 100%;
+			left: 0;
+			bottom: 0;
+			z-index: 2002;
+			background: #fff;
+			padding: 5px 0;
+			border-top:1px solid $c_e3e3;
+		}
+		.aBtn{
+			width: 46.1%;
+			height: 40px;
+			line-height: 40px;
+			background: $c_2c9a;
+			color: $c_fff;
+			font-size: $f_14;
+			display: inline-block;
+			text-align: center;
+			margin-left: 2.6%;
+			border-radius: 5px;
+			a{
+				display: inline-block;
+				width: 100%;
+			}
+			.hide{
+				display: none;
+			}
+		}
+		.shotDwon{
+			background: #d3d2d2;
+			border-radius: 5px;
+		}
+		.navBanner{
+			
+			img{
+				width: 100%;
+				display: block;
+				height: auto;
+			}
+		}
+		
+	}
+	.carSwiper{
+		.swiper-container{
+			img{
+				width: 100%;
+				vertical-align: middle;
+				border:0 none;
+			}
+			.fixCarNumber{position: absolute;background: rgba(0, 0, 0, 0.5);z-index: 1000;bottom:8px;left: 10px;height: 20px;line-height:20px;padding:0 5px;border-radius: 5px;color: #fff;font-size: $f_12;}
+			
+			.swiper-pagination-bullet{
+				background: #a3a1a1;
+			}
+			.swiper-pagination-bullet-active {
+			    background: $c_2c9a;
+			}
+			
+		}
+		
+	}
+	.surveyBox{
+		.versionPrice{
+			padding:10px 0;
+			overflow:hidden;
+			background: $c_fff;
+			.vPriceL{
+				width: 50%;
+				text-align: center;
+				font-size: $f_16;
+				height: 30px;
+				line-height: 30px;
+				position: relative;
+
+				.tit{
+					color: $c_999;
+				}
+				.yellow{
+					color: $c_yellow;
+				}
+				.blue{
+					color: $c_2c9a;
+				}
+			}
+			.vLine{
+				display: inline-block;
+				position: absolute;
+				left:0;
+				top:0;
+				height: 100%;
+				width:1px;
+				background: $c_e3e3;
+			}
+		}
+		.surveyItem{
+			background: $c_fff;
+			margin-bottom: 10px;
+			
+			border-color: $c_e3e3;
+			.surveyTit{
+				position: relative;
+				padding:10px 0 10px 0;
+				font-size: $f_12;
+				.sDiv{
+					padding-left: 10px;
+					border-left: 5px solid $c_2c9a;
+					line-height: 24px;
+					height: 24px;
+					.explain{
+						margin:2px 20px 0 0;
+						position: relative;
+						.explainIcon{
+							display: inline-block;
+							background: url(../images/markIcon.png) no-repeat;
+							background-size: 100%;
+							width: 20px;
+							height: 20px;
+						}
+						.drow{
+							position: absolute;
+							display: inline-block;
+							width: 10px;
+							height: 10px;
+							background: $c_fff;
+							border-top:1px solid $c_e3e3;
+							border-right:1px solid $c_e3e3;
+							z-index: 2001;
+							right: -6px;
+							top: 8px;
+							transform: rotateZ(45deg);
+						}
+
+					}
+					.explainPop{
+						z-index: 1000;
+						position: absolute;
+						background: $c_fff;
+						padding:10px 10px 10px 30px;
+						width: 200px;
+						border:1px solid $c_e3e3;
+						right: 32px;
+						top:-5px;
+						border-radius: 5px;
+						font-size: $f_12;
+						box-shadow: 0 1px 5px $c_e3e3;
+						.explainImg{
+							display: inline-block;
+							background: url(../images/tonIcon2.png) no-repeat;
+							background-size: 100%;
+							width: 5px;
+    						height: 22px;
+    						position: absolute;
+    						left:12px;
+    						top:50%;
+    						margin-top:-11px;
+						}
+					}
+
+				}
+				.sDiv::after{
+					clear: both;
+				}
+				
+			}
+			.skeleton{
+				table{
+					width: 100%;
+					tr{
+						td{
+							border:1px solid $c_e3e3;
+							font-size: $f_12;
+							padding:5px 0;
+						}
+						.tdTit{
+							text-align: center;
+							border-left: 0 none;
+
+							.titDiv{
+								position: relative;
+								
+								color: $c_999;
+								
+								.tonIcon0{
+									background-image: url(../images/tonIcon0.png);
+								}
+								.tonIcon1{
+									background-image: url(../images/tonIcon1.png);
+								}
+								.tonIcon2{
+									background-image: url(../images/tonIcon2.png);
+								}
+								.tonIcon3{
+									background-image: url(../images/tonIcon3.png);
+								}
+								.tonIcon4{
+									background-image: url(../images/tonIcon4.png);
+								}
+								.tonIcon5{
+									background-image: url(../images/tonIcon5.png);
+								}
+								em{
+									display: inline-block;
+									background-repeat:no-repeat;
+									width: 5px;
+									height: 22px;
+									background-size: 100%;
+									position: absolute;
+									right: 10px;
+									top:50%;
+									margin-top: -11px;
+								}
+							}
+						}
+						.tdTxt{
+							border-right: 0 none;
+							.record{
+								position: relative;
+								padding-left: 10px;
+								padding-right: 10px;
+								.recordTxt{
+									float: left;
+								}
+								a{
+									
+									color: $c_2c9a;
+    								height: 24px;
+    								line-height: 24px;
+    								display: inline-block;
+    								float: right;
+    								font-weight: bold;
+    								margin-left: 10px;
+								}
+								.recordSpan{
+									display: inline-block;
+									background: url("../images/onIcon.png") no-repeat center center;
+									background-size: 100%;
+									width: 22px;
+									height: 18px;
+									float: right;
+									margin-top:2px;
+								}
+								.recordVal{
+									display: inline-block;
+									
+								}
+							}
+						}
+					}
+				}
+			}
+			.license{
+				table{
+					width: 100%;
+					tr{
+						td{
+							border:1px solid $c_e3e3;
+							padding:5px 0;
+							text-align: center;
+							font-size: $f_12;
+							
+						}
+						.bln{
+							border-left: 0 none;
+						}
+						.blr{
+							border-right: 0 none;
+						}
+					}
+				}
+			}
+		}
+		.surveyPrice{
+			padding:10px 0;
+			font-weight: bold;
+			font-size: $f_16;
+			color: $c_999;
+			overflow: hidden;
+
+			.bidding{
+				.bidItem{
+					float: left;
+					width: 50%;
+					text-align: center;
+					height: 30px;
+					line-height: 30px;
+					position: relative;
+					.blue{
+						color: $c_2c9a;
+					}
+					.yellow{
+						color:#feae2c;
+					}
+					em{
+						position: absolute;
+						height: 100%;
+						width: 1px;
+						right: 0;
+						top: 0;
+						background: $c_e3e3
+					}
+				}
+				
+			}
+			
+		}
+		.surveyBtn{
+			color: $c_2c9a;
+			padding:10px 0;
+			div{
+				width: 50%;
+				text-align: center;
+				font-size: $f_14;
+			}
+			.hasRecord{
+				border-right: 1px solid $c_e3e3;
+			}
+		}
+		.surveyScore{
+			padding:18px 0 18px 10px;
+			.surveyPost{
+				position: relative;
+				overflow: hidden;
+				font-size: $f_12;
+			}
+			.scoreL{
+				float: left;
+				padding-right:100px;
+				p{
+					font-size: $f_12;
+				}
+				.carName{
+					font-size: $f_14;
+					font-weight: bold;
+				}
+				.tit{
+					
+					
+					i{
+						font-style: normal;
+					}
+				}
+			}
+			.scoreR{
+				padding:0 20px;
+				text-align: center;
+				position: absolute;
+				border-left:1px solid $c_e3e3;
+				right: 0;
+				top:0;
+				height: 100%;
+				color: $c_999;
+				width:86px;
+				.abDiv{
+					position: absolute;
+					width:100%;
+					height: 60px;
+					top:50%;
+					margin-top: -30px;
+					left:0;
+					p{
+						height: 30px;
+						line-height: 30px;
+					}
+				}
+				.scoreTit{
+					
+					
+				}
+				.score{
+					.scorNum{
+						display: inline-block;
+						background: #ff6d6e;
+						height: 22px;
+						line-height: 22px;
+						padding:0 10px;
+						color: $c_fff;
+					}
+				}
+			}
+		}
+		.lineThree{
+
+			ul{
+				overflow:hidden;
+				li{
+					float: left;
+					width: 33.33%;
+					text-align: center;
+					border-bottom: 1px solid $c_e3e3;
+					font-size:$f_12;
+					div{
+						padding: 8px 0;
+					
+					}
+					.br{
+						border-right: 1px solid $c_e3e3;
+
+					}
+				}
+			}
+		}
+		.configMenu{
+			.procedures{
+				overflow: hidden;
+				padding:5px 0;
+				.configItem{
+				    width: 33.33%;
+				    float: left;
+				    position: relative;
+				    height: 34px;
+					
+				    .configTxt{
+				    	width: 100%;
+					    padding-left: 34px;
+					    display: inline-block;
+					    overflow: hidden;
+					    height: 34px;
+					    line-height: 34px;
+					   /* white-space: nowrap;
+					    text-overflow: ellipsis;*/
+					    font-size: $f_12;
+				    }
+				    .configTit{
+				    	display: inline-block;
+				    	width: 16px;
+					    height: 100%;
+					    position: absolute;
+					    left: 10px;
+					    top: 0;
+				    }
+				    .hasConfig{
+					    background: url('../images/configH.png') no-repeat center center;
+					    background-size: 100%;
+				    }
+				    .noConfig{
+					    background: url('../images/configN.png') no-repeat center center;
+					    background-size: 100%;
+				    }
+				}
+			}
+			.twoMoreProcedures{
+				border-top:1px solid $c_e3e3;
+				margin:0 9px;
+				padding:10px 0;
+				.twoMoreItem{
+					position: relative;
+					height: 30px;
+					line-height: 30px;
+					padding-left: 28px;
+					font-size: $f_12;
+					.icon{
+						display: inline-block;
+				    	width: 20px;
+					    height: 100%;
+					    position: absolute;
+					    left: 0;
+					    top: 0;
+					    
+					}
+					.icon1{
+						background: url('../images/twoIcon1.png') no-repeat center center;
+					    background-size: 100%;
+					}
+					.icon2{
+						background: url('../images/twoIcon2.png') no-repeat center center;
+					    background-size: 100%;
+					}
+				}
+			}
+		}
+		.configure{
+			table{
+				width: 100%;
+				tr{
+					td{
+						border:1px solid $c_e3e3;
+						padding:5px 0;
+						text-align: center;
+						font-size: $f_12;
+						
+						.configureOn{
+							position: relative;
+							width: 100%;
+							height: 100%;
+							.onIcon{
+								background: url('../images/configH.png') no-repeat;
+						    	background-size: 100%;
+						    	display: inline-block;
+						    	width: 16px;
+							    height: 16px;
+							    position: absolute;
+							    top:50%;
+							    left:50%;
+							    margin:-8px 0 0 -8px; 
+							}
+						}
+					}
+					.bln{
+						border-left: 0 none;
+					}
+					.blr{
+						border-right: 0 none;
+					}
+				}
+			}
+		}
+		.consignment{
+			overflow: hidden;
+			padding: 20px 0;
+			font-size: $f_12;
+			.consignmentItem{
+				float: left;
+				width: 33.333%;
+				text-align: center;
+				position: relative;
+				.consLine{
+					position: absolute;
+					width: 1px;
+					height: 100%;
+					background: #e3e3e3;
+					right: 0;
+					top:0;
+				}
+			}
+		}
+	}
+	.fixedH{
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	.appearance{
+		height: 270px;
+		overflow-y: scroll;
+		.reserveRoom{
+			height: 40px;
+		}
+		.appearanceItem{
+			background: $c_fff;
+			border-bottom:1px solid $c_e3e3;
+			.skeletonHideDes{
+				padding:0 2.5%;
+				font-size: $f_12;
+				padding-bottom: 10px;
+				text-align: center;
+				color: $c_999;
+			}
+			.appearanceSvg{
+				position: relative;
+
+				.noole{
+					position: absolute;
+					z-index: 11;
+					top:0;
+					width: 100%;
+					height:100%;
+					left: 0;
+					svg{
+						fill:none;
+
+						.paint{
+							background: #fff9ec;
+						}
+						.repaired{
+							background: #fad3d7
+						}
+					}
+					
+				}
+				.point{
+					position: absolute;
+					top:0;
+					width: 100%;
+					height:100%;
+					left: 0;
+					z-index: 12;
+					svg{
+
+						g{
+							opacity: 0;
+							stroke: none;
+						}
+						.light{
+							fill: #ffe2ab;
+							opacity: 1;
+						}
+						.hight{
+							fill: #ffa93a;
+							opacity: 1;
+						}
+						.highter{
+							fill: #ff252d;
+							opacity: 1;
+						}
+					}
+				}
+			}
+			.appearancePic{
+				padding:5% 2.5%;
+				display: block;
+				svg{
+					width: 100%;
+					fill:#ffffff;
+					stroke: #6d6765;
+					display: block;
+				}
+			}
+			.cytoskeleonSvg{
+				.appearancePic{
+					padding-bottom: 0;
+				}
+			}
+			.mechanicsPic{
+				display: block;
+				position: relative;
+				svg{
+					fill: #fff;
+				}
+				.mechanicsBetter{
+					position: absolute;
+					width: 100%;
+					height:60px;
+					left:0;
+					top:50%;
+					margin-top:-30px;
+					
+					
+					p{
+						font-size: $f_12;
+
+						img{
+							width: 16px;
+							vertical-align: middle;
+						}
+					}
+				}
+			}
+			.degreeItem{
+				margin-bottom:15px;
+				overflow: hidden;
+				.tit{
+					display: inline-block;
+					text-align: center;
+					float: left;
+					width: 25%;
+				}
+				.txt{
+					float: left;
+					width: 25%;
+					display: inline-block;
+					position: relative;
+					padding-left: 32px;
+					font-size: $f_14;
+					.goldSe{
+						position: absolute;
+						display: inline-block;
+						width: 22px;
+						height: 12px;
+						left:0;
+						top:0;
+						text-align: center;
+						.paint{
+							background: #ffecbe;
+							
+						}
+						.repaired{
+							background: #fad3d7
+						}
+						.highter{
+							background: #ff252d
+						}
+						.hight{
+							background: #ffa93a
+						}
+						.light{
+							background: #ffe2ab
+						}
+					}
+				}
+				
+			}
+			.existTroue{
+				em{
+					display: inline-block;
+					height: 12px;
+					width: 12px;
+					border-radius: 12px;
+					background: red;
+				}
+			}
+			.repair{
+				
+				em{
+					display: inline-block;
+					width: 100%;
+					height: 100%;
+				}
+				
+			}
+
+		}
+		.appearanceInfo{
+			
+			margin:10px 0;
+			background: $c_fff;
+			overflow:hidden;
+			table{
+				width: 100%; 
+				tr{
+					td{
+						border:1px solid $c_e3e3;
+						padding:5px 0;
+						font-size: $f_12;
+
+						.tdDecr{
+							padding:0 34px 0 10px;
+							position: relative;
+							em{
+								position: absolute;
+								display: inline-block;
+								background: url("../images/onIcon.png") no-repeat center center;
+								background-size: 100%;
+								width: 22px;
+								height: 100%;
+								right: 10px;
+								top:0;
+							}
+						}
+						.okShow{
+							padding:10px 0;
+							img{
+								width: 24px;
+							}
+						}
+					}
+					.w20{
+						width: 20%;
+					}
+					.w25{
+						width: 25%;
+					}
+					.w30{
+						width: 30%;
+					}
+					.w50{
+						width: 50%;
+					}
+					.brl{
+						border-left: 0 none;
+					}
+					.brn{
+						border-right: 0 none;
+					}
+				}
+			}
+		}
+	}
+}

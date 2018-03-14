@@ -1,0 +1,129 @@
+/*收入明细*/
+.incomeDetail{
+    .incomeDetailBox {
+        .incomeDetailItem{
+            position: relative;
+        }
+        .fixed {
+            .fixedHeight{
+                height: 40px;
+            }
+            .detailTit{
+                .titDate{
+                    z-index: 100;
+                    position: fixed;
+                    top:0;
+                    left: 0;
+                    width: 100%;
+                   background:#f0eff4;
+                   height:40px;
+                }
+               
+            }
+            
+        }
+        
+        .detailTit{
+            line-height: 40px;
+            height: 40px;
+            .titDate{
+                /*border-bottom: 1px solid #e0e0e0;*/
+                padding:0 12px;
+                height: 40px;
+                color: $c_2c2c2c;
+                font-size: $f_16;
+              
+                width: 100%;
+                background:#f0eff4;
+            }
+            .fixed{
+                position: fixed;
+                top:0;
+                left:0;
+            }
+        }
+        .detaiWrap{
+            background: #fff;
+            padding:0 12px;
+           
+            .detailJC{
+               background: url(../img/detailJC.png) no-repeat;
+            }
+            .detailCJ{
+                background: url(../img/detailCJ.png) no-repeat;
+            }
+            .detailGX{
+                background: url(../img/detailGX.png) no-repeat;
+            }
+            .detailJL{
+                background: url(../img/detailJL.png) no-repeat;
+            }
+            .listItem {
+                overflow: hidden;
+               
+                position: relative;
+            }
+            .listItem:last-child{
+                border-bottom: 0 none;
+            }
+            .detailIcon{
+                position: absolute;
+                display: inline-block;
+                width: 30px;
+                height: 100%;
+                background-size: 100%;
+                background-position: center center;
+            }
+            .detatilL{
+                float: left;
+                padding:10px 45px 10px 42px;
+                width: 100%;
+                .incomeSource{
+              
+                    position: relative;
+                    .payTit,.payStyle{
+                        display: inline-block;
+                        color: $c_2c2c2c;
+                        font-size: $f_16;
+                        float: left;
+                    }
+                    .payStyle{
+                        background: url(../img/wx_pay.png) no-repeat;
+                        background-size: 100%;
+                        width: 16px;
+                        height: 16px;
+                        margin-left:10px;
+                        margin-top:3px;
+                    } 
+                }
+                .incomeName{
+                    color: $c_666;
+                    font-size: $f_14;
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                    white-space: nowrap;
+                    width: 100%;
+                }
+            }
+            .detailR{
+                position: absolute;
+                right: 0;
+                top:50%;
+                height: 36px;
+                margin-top:-18px;
+                span{
+                    display: block;
+                    text-align: right;
+                }
+                .getDate{
+                    color: $c_999;
+                    font-size: $f_14;
+                }
+                .souceStyle{
+                    color: #2c9afe;
+                     font-size: $f_14;
+                }
+            }
+        }
+    }
+}

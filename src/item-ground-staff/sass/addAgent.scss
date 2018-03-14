@@ -1,0 +1,117 @@
+.addAgent,.branchEdit{
+	margin-top:12px;
+	.info,.write{
+		margin: 12px 0;
+		padding:0 4%;
+    	background: #fff;
+    	position: relative;
+	}
+	input{
+		padding-left: 0;
+		width: 100%;
+		height: 55px;
+	    border: 0;
+		outline: 0;
+		color: #2c2c2c;
+	}
+	textarea{
+		padding-left: 0;
+		margin-top: 15px;
+		width: 100%;
+		border:0;
+		height: 85px;
+		outline: 0;
+		color: #2c2c2c;
+	}
+	button{
+	    width: 92%;
+	    margin: 8px 4% 0 4%;
+	    height: 48px;
+	    border-radius: 4px;
+	    outline: 0;
+	}
+	.svg1{
+		height: 24px;
+	    width: 24px;
+	    position: absolute;
+	    right: 4%;
+	    top: 15px;
+	}
+	.classify{
+		position: relative;	
+    	width: 100%;
+		background: #fff;
+		padding-left: 4%;
+		margin-bottom: 12px;
+	    lable{
+    		display: inline-block;
+		    width: 100px;
+		    height: 55px;
+		    line-height: 55px;
+		    vertical-align: middle;
+	    }
+	    select{
+	    	position: absolute;
+	    	top:1px;
+    	    right: 10%;
+			border:0 none;
+		    outline: 0;
+			border-radius: 0;
+			height: 53px;
+			width: 70%;
+			direction: rtl;
+			background: #fff;
+            -webkit-appearance: none;
+	    }
+	    .orientation{
+	    	display: inline-block;
+	    	width: 10px;
+	    	height: 10px;
+	    	border-top: 2px solid #dddddd;
+	    	border-right: 2px solid #dddddd;
+	    	position: absolute;
+		    right: 4%;
+		    top: 20px;
+		    -webkit-transform: rotate(135deg);
+		    transform: rotate(135deg);
+	    }
+	}
+	.inactivated{
+		margin-top: 20px;
+	}
+	.brandAddressByGPS{
+		position: relative;
+		padding: 10px 4%;
+		select{
+		    position: absolute;
+    		top: 15px;
+			border:0 none;
+		    outline: 0;
+			border-radius: 0;
+			background: #f0eff4;
+			width: 50%;
+		}
+		span{
+		    width: 75%;
+			position: absolute;
+			left: 22%;
+			background: #f0eff4;
+			padding-left: 10px;
+			pointer-events: none;
+		    white-space: nowrap;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    display: inline-block;
+		    height:40px;
+		}
+	}
+}
+
+.branchEdit{
+	margin-top: 0;
+	height: 40px;
+	line-height: 40px;
+	.agentId{
+		padding-left: 4%;
+	}
+}

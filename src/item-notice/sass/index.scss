@@ -1,0 +1,74 @@
+
+
+@import "../../base-common/css/common";
+
+body{
+  background: #fff;
+  font-size: 14px;
+  color: #2c2c2c;
+}
+.notice-list li {
+    height: 80px;
+    padding: 15px 10px;
+    border-bottom: 1px solid #ddd;
+}
+.notice-list li img {
+    float: left;
+    width: 22px;
+    height: 22px;
+    margin: 15px 10px 15px 0;
+}
+.notice-list li h5 {
+    line-height: 20px;
+    color: #2c2c2c;
+    font-size: 18px;
+}
+.notice-list li p {
+    font-size: 14px;
+    line-height: 18px;
+    color: #666; 
+}
+.notice-list li span {
+    display: block;
+    font-size: 12px;
+    line-height: 18px;
+    color: #999; 
+}
+.notice-list li h5, .notice-list li p, .notice-list li span {
+    width: 88%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+}
+.notice-list li.read h5, .notice-list li.read p, .notice-list li.read span {
+    color: #ababab; 
+}
+.notice-detail .notice-title {
+    height: 60px;
+    background: #2c9afe;
+    color: #fff;
+    line-height: 60px;
+    text-align: center;
+    font-size: 22px;
+}
+.notice-detail .notice-body {
+    background: #fbf7ed;
+    font-size: 18px;
+    color: #2c2c2c;
+    line-height: 18px;
+}
+.notice-detail .notice-footer {
+    font-size: 12px;
+    color: #2c2c2c;
+    padding: 18px 10px; 
+}
+.no-ms {
+    display: block;
+    width: 118px;
+    margin: 128px auto 0;
+    text-align: center;
+}
+.loading img{
+    width: 40px;
+    height: 40px;
+}

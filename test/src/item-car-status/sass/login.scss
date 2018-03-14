@@ -1,0 +1,53 @@
+.loginBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	.loginTopImg{
+		width: 100%;
+	}
+	.inputBox{
+		position: relative;
+		width: 94%;
+		margin: -22% 3% 0 3%;
+		border:0;
+		border-radius: 5px;
+		background: #ffffff;
+		padding: 0 20px ;
+		box-shadow: 0 3px 1px #ced1d7;
+		z-index: 1;
+		.codes{
+			display: inline-block;
+			width: 54.4%;
+		}
+		input{
+			width: 100%;
+			padding: 6.5px 0;
+			border:0;
+			outline:0;
+			padding-left: 0;
+			margin-top: 20px;
+		}
+		.getCodes{
+			float: right;
+		    width: 40%;
+			margin-top: 20px;
+			background-color: #ffffff;
+			border:1px solid #2c2c2c;
+			outline: 0;
+			border-radius: 0px;
+			color: #2c2c2c;
+		    padding: 5.5px 0;
+		    &.chaTime{
+				border:1px solid #e0e0e0;
+				color: #cccccc;
+		    }
+		}
+		.enter{
+			width: 100%;
+			height: 48px;
+			line-height: 48px;
+			margin:20px 0;
+			outline: 0;
+		}
+	}
+}

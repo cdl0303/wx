@@ -1,0 +1,17 @@
+{
+	"success":true,
+	"ret":{
+		"vnId":239444,
+		"cName":"张三",
+		"cNumber":"SH012922",
+		"origin":"上海-代理人-vehiclea_19332",
+		"vInfo":"别克 凯越 2013款",
+		"timestamp":"1474289100000",
+		"shop":"上海吴中路店",
+		"remark":"五角场",
+		"city":"上海", 
+        "shopId":62,   
+        "examinatId":3, 
+	},
+	"message":""
+}

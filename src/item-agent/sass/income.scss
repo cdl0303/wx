@@ -1,0 +1,146 @@
+
+/*收入*/
+ .incomeBox{
+
+    .swiper-container{
+        padding-top:20px;
+        .swiper-button-prev,.swiper-button-next,.swiper-button-disabled{
+             top:50px;
+             background-image:none;
+             width: 22.4%;
+             text-align: center;
+             height: 80px;
+             z-index: 100;
+        }
+        .swiper-button-prev span,.swiper-button-next span,.swiper-button-disabled span{
+           
+            width: 1rem;
+            height: 1rem;
+            margin-top: 13px;
+            content: '';
+            border-top: 1px solid $c_666;
+            border-right: 1px solid $c_666;
+            
+            display: inline-block;
+            
+
+        }
+       .swiper-button-next span{
+           -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+            right: 40px;
+             
+        }
+        .swiper-button-prev span{
+             
+             opacity: 1;
+             -webkit-transform:rotate(-135deg);
+              left: 40px;
+        }
+        .swiper-button-disabled{
+            border-color: #ccc;
+        }
+    }
+    .swiper-slide{
+        width:77.6%;
+        padding:0 6.8%;
+        .incomeItem{
+             text-align: center;
+            .incomeTit{
+                p{color: $c_666;font-size: $f_14;}
+               .titMonth{font-size: $f_16;color: $c_2c2c2c;}
+               .titTotalIncome{color: #ff4444;font-size: $f_30;line-height: $f_30;padding-top:10px;}
+            }
+            .incomeCont{
+                background: #2592f8;
+                border-radius: 5px;
+                margin-top:30px;
+                text-align: center;
+                color: #fff;
+                ul {
+
+                    li{
+                        color: #bfdafe;
+                        float:left;
+                        width: 50%;
+                        padding:8.6% 0;
+                        .incomeNum{color: #fff;font-size: $f_30;}
+                        .jcIcon{
+                             background: url(../img/jc.png) no-repeat 0 0;
+                        }
+                        .cjIcon{
+                             background: url(../img/chj.png) no-repeat 0 0;
+                        }
+                        .gxIcon{
+                            background: url(../img/gx.png) no-repeat 0 0;
+                        }
+                        .jlIcon{
+                            background: url(../img/jl.png) no-repeat 0 0;
+                        }
+                        .incomeIcon{
+                            display: inline-block;
+                            width: 36px;
+                            height: 36px;
+                            background-size: 100%;
+                        }
+
+                    }
+                    .borderB{
+                        border-bottom: 1px solid #238beb;
+                    }
+                    .borderR{
+                        border-right: 1px solid #238beb;
+                    }
+                    p{
+                        font-size: $f_12;
+                        color: #bfdafe;
+                        padding-top: 5.7%;
+                    }
+                    .incomeNumP{
+                        padding-top:0;
+                    }
+
+                }
+            }
+            
+            
+        }
+    }
+    .incomeDetailLink {
+        padding-top: 20px;
+        text-align: center;
+        a{
+            color: #2592f8;
+            font-size: $f_16;
+            display: inline-block;
+            position: relative;
+            em{
+                 display: inline-block;
+                  background: url(../img/smallThrow.png) no-repeat center center;
+                  background-size: 100%;
+                  width: 4px;
+                  height: 100%;
+                  position: absolute;
+                  right:-8px;
+                  top:0;
+        
+            }
+        }
+    }
+    
+ }
+
+ @media screen and (max-height: 480px) {
+    .incomeBox .swiper-container{
+        padding-top:10px;
+    }
+    .incomeBox .swiper-slide .incomeItem .incomeCont ul li{
+        padding: 5.6% 0;
+    }
+    .incomeBox .swiper-slide .incomeItem .incomeCont{
+        margin-top:20px;
+    }
+    .incomeBox .swiper-slide .incomeItem .incomeCont ul p{
+        padding-top:1.7%;
+    }
+}

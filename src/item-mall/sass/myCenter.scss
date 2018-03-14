@@ -1,0 +1,498 @@
+/*个人中心*/
+$f_sizeColor:#2c2c2c;
+.wrap{
+    height: 100%
+}
+.myCenter{
+    .centerHead{
+        background: url(../img/centerHeadBg.png) no-repeat center center;
+        background-size: 100%;
+        width: 100%;
+        
+        padding:5% 0;
+        .headPicMenu{
+            width: 17.6%;
+            height: 0;
+            padding: 8.8% 0;
+            margin:0 auto;
+            overflow: hidden;
+            position: relative;
+            .headPic{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                border-radius: 50%;
+                bottom:0;
+                left:0;
+                overflow: hidden;
+                text-align: center;
+                img{
+                    border:3px solid rgba(122,122,122,0.5);
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100%;
+                }
+            }
+        }
+        .headName{
+            text-align: center;
+            padding-top:12px;
+            color: #bdc0c5;
+            line-height: 24px;
+            font-size: 0.875rem;
+
+        }
+    }
+    .centerItemCont{
+        margin-top:10px;
+        border-top:1px solid #e0e0e0;
+        border-bottom:1px solid #e0e0e0;
+        background: #fff;
+        padding:0 4%;
+        .centerItem{
+             position: relative;
+             
+             border-top:1px solid #e0e0e0;
+             overflow: hidden;
+             a.centerItemA{
+                padding:18px 0;
+                display: block;
+                width: 100%;
+                color: #2c2c2c;
+             }
+            em{
+                 background: url(../img/centerThrow.png) no-repeat center center;
+                 height: 100%;
+                 width: 8px;
+                 background-size: 100%;
+                 position: absolute;
+                 right: 0;
+                 top:0;
+                 display: inline-block;
+            }
+            .orderExport{
+                width: 25%;
+                float: left;
+                text-align: center;
+                
+                a{
+                    color: #2c2c2c;
+                    display: block;
+                    span{
+                        display: block;
+                        margin:0 auto 9px;
+                        position: relative;
+                        background: url(../img/orderIcons.png) no-repeat 0 0;
+                        background-size: 100% auto;
+                        i{
+                            font-style: normal;
+                            display: inline-block;
+                            position: absolute;
+                            border:1px solid #ec1e00;
+                            line-height: 12px;
+                            padding:1px 4px;
+                            color: #ec1e00;
+                            border-radius: 12px;
+                            background: #fff;
+                            z-index: 10;
+                            top:-7px;
+                            right: 20%;
+                            -webkit-transform: translateX(50%);
+                            font-size: 0.75rem;
+                            white-space:nowrap;
+                        }
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .payStyleIcon{
+                        width: 25px;
+                        height: 25px;
+                    }
+                    .payBehalf{
+                        background-position: 0 0;
+                    }
+                    .deliveryBehalf{
+                        background-position: 0 -25px;
+                    }
+                    .receiptBehalf{
+                        background-position: 0 -50px;
+                        i{
+                          right: 10%;
+                        }
+                    }
+                    .HadBehalf{
+                        
+                        background-position: 0 -75px;
+                    }
+                    p{
+                        font-size: 0.75rem;
+                    }
+
+                }
+            }
+            
+        }
+        .centerItemExport{
+            padding:18px 0;
+        }
+        .centerItem:first-child{
+            border-top:0 none;
+        }
+    }
+}
+
+@media screen and (min-width: 360px){
+    .myCenter .centerItemCont .centerItem .orderExport a .payStyleIcon{
+        width: 32px;
+        height: 32px;
+    }
+    .myCenter .centerItemCont .centerItem .orderExport a span i{
+        line-height: 14px;
+        padding:2px 5px;
+        border-radius: 64px;
+        
+    }
+  
+    .myCenter .centerItemCont .centerItem .orderExport a .payBehalf{
+        
+        background-position: 0 0;
+    }
+    .myCenter .centerItemCont .centerItem .orderExport a .deliveryBehalf{
+       
+        background-position: 0 -32px;
+    }
+    .myCenter .centerItemCont .centerItem .orderExport a .receiptBehalf{
+       background-position: 0 -64px;
+        
+    }
+    .myCenter .centerItemCont .centerItem .orderExport a .HadBehalf{
+       
+        
+        background-position: 0 -96px;
+    }
+}
+.addressMenu{
+    background: #fff;
+     padding: 0 3.2%;
+     border-bottom: 1px solid #e0e0e0;
+    .addressItem{
+        overflow: hidden;
+        border-top: 1px solid #e0e0e0;
+        .addressItemTit{
+            float: left;
+            width: 25%;
+            font-size: 0.875rem;
+            padding:0.875rem 0;
+        }
+        .addressItemCont{
+            overflow: hidden;
+            margin-left: 25%;
+            input{
+                padding:0.875rem 0;
+                border:0 none;
+                width:100%;
+                font-size: 0.875rem;
+                outline: none;
+            }
+            .selectSpan{
+                display: block;
+                width: 33.3%;
+                height: 100%;
+                height: 3.0625rem;
+               float: left;
+                position: relative;
+                .positionSpan{
+                    position: absolute;
+                    top:0;
+                    left: 0;
+                     /*padding:0.875rem 0;*/
+                     height: 100%;
+                     line-height: 3.0625rem;
+                     display:block;
+                     width: 100%;
+                     background: #fff;
+                     white-space:nowrap; 
+                     overflow:hidden;
+                      text-overflow:ellipsis;
+                    
+                }
+                select{
+                    
+                    border:0 none;
+                    width: 100%;
+                    /*padding:0.875rem 0;*/
+                    height: 100%;
+                     font-size: 0.875rem;
+                     
+                     opacity: 0;
+                      background: transparent;
+                      -webkit-appearance: none;
+                }
+            }
+            
+        }
+        
+       /* select,input{
+            width: 100%;
+            border:1px solid #ddd;
+            padding: 2px 3px;
+            font-size: 0.875rem;
+        }*/
+        textarea{
+            width: 100%;
+            border:0;
+            padding:0.875rem 0;
+            font-size: 0.875rem;
+            overflow-y:auto;
+            outline: none;
+        }
+        input::-webkit-input-placeholder {
+          color:#cccccc;
+        }
+        
+    }
+    .addressItem:first-child{
+        border-top: 1px solid #fff;
+    }
+    .addressfixed{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        .addressBtn{
+            span{
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                border:0 none;
+                font-size: 18px;
+                background: #2c9afe;
+                color:#fff;
+                display: inline-block;
+            }
+        }
+    }
+}
+.addressList{
+    .addressListItem{
+        background: #fff;
+        padding: 0 3.2%;
+        margin-bottom: 12px;
+        .addressInfo{
+            padding:20px 0;
+            p:first-child{
+                margin-bottom:10px;
+            }
+
+            p{
+                color:$f_sizeColor; 
+                line-height: 24px;
+                font-size: 0.875rem;
+                span{
+                    display: inline-block;
+                }
+                .addInfoName{
+                    margin-right: 12px;
+                }
+
+            }
+        }
+        .addressOptions{
+            padding: 18px 0;
+            overflow: hidden;
+            .spanIcon{
+                line-height: 24px;
+                position: relative;
+                padding-left: 28px;
+                float: left;
+                em{
+                    position: absolute;
+                    top:1px;
+                    left:0;
+                    background: url(../img/address_list.png) no-repeat 0 -4px;
+                    background-size: 100%;
+                    height: 20px;
+                    display: inline-block;
+                    width: 20px;
+                }
+            }
+            .setDefault{
+                float: left;
+                .setedIocn{
+                    em{
+                      background-position: 0 -28px;  
+                   }
+               }
+            }
+            .editDel{
+                float: right;
+                .editIcon{
+                   
+                    em{
+                         background-position: 0 -52px;
+                   }
+
+                }
+                .delIcon{
+                    margin-left: 28px;
+                    em{
+                        background-position: 0 -76px;
+                   }
+                }
+            }
+        }
+    }
+    .addressListItem:first-child{
+        border-top:0;
+    }
+    .addNews{
+        height: 50px;
+        .addNewsBtn{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            span{
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                border:0 none;
+                font-size: 18px;
+                background: #2c9afe;
+                color:#fff;
+                display: inline-block;
+            }
+        
+        }
+    }
+}
+.orderMenu{
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    .orderSelect{
+       
+        li{
+            float: left;
+            padding: 0 3.2%;
+            
+            a{
+                display: block;
+                height: 100%;
+                font-size: 0.875rem;
+                padding: 0.5rem 0;
+                position: relative;
+               
+            }
+        }
+        li.cur a i{
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #2c9afe;
+            color: #2c9afe;
+            bottom: -1px;
+            left:0;
+        }
+    }
+    .orderList{
+        .orderItem{
+            .orderMark{
+                text-align: center;
+                margin-top:40%;
+                img{
+                    width: 50%;
+                }
+                p{
+                    font-size: 1rem;
+                    color: #999;
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+}
+.hide{
+    display: none;
+}
+.hpl_pop{
+   
+   .pop_bg{
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left: 0;
+        z-index: 1000;
+      }
+      .pop_cont{
+        position: absolute;
+        z-index: 1001;
+        width: 72%;
+        top:34%;
+        background: rgba(255, 255, 255, 1);
+        left:50%;
+        border-radius: 10px;
+        margin-left: -36%;
+        text-align: center;
+        .pop_tit{
+          border-bottom: 1px solid #b0adbe;
+          padding: 20px 0 10px 0;
+          p{
+           line-height: 30px;
+          }
+          .pop_txt{
+            font-size: 14px;
+          }
+          .pop_h3{
+            color: #000;
+            font-size: 18px;
+            font-weight: bold;
+          }
+        }
+        .pop_btn{
+
+          span{
+            display: inline-block;
+            width: 50%;
+            height: 44px;
+            line-height: 44px;
+            color: #047bff;
+            font-size: 18px;
+             font-weight: bold;
+          }
+          .one_sure{
+            width: 100%;
+          }
+          .pop_cancel{
+            border-right: 1px solid #b0adbe;
+          }
+        }
+      }
+   }
+/*@media screen and (min-width: 360px){
+    .myCenter .centerItemCont .centerItem .orderExport a .payBehalf{
+
+    }
+   .myCenter .centerItemCont .centerItem .orderExport a span i{
+        line-height: 14px;
+        padding:1px 4px;
+        border-radius: 14px;
+        left: 57%;
+        top:-10px;
+   }
+}
+@media screen and (min-width: 400px){
+   .myCenter .centerItemCont .centerItem .orderExport a span i{
+        line-height: 16px;
+        padding:2px 6px;
+        border-radius: 64px;
+        left: 50%;
+        top:-13px;
+   }
+}*/

@@ -1,0 +1,266 @@
+@import "../../base-common/css/common";
+
+    body{
+      background: #f0eff4;
+      color: #000;
+      font-size:0.75rem;
+    }
+    a{
+    	color:#333;
+    }
+    .cardPackage_box{
+     
+      width: 100%;
+     
+    }
+    .cardPackage_box ul{
+      padding:0 3% 20% 3%;
+    }
+    .cardPackage_box ul li{
+      height: 100px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      margin-top:10px;
+      
+    }
+    .packAge_l{
+      width: 100%;
+      float: left;
+      position: relative;
+      height: 100%;
+      padding-right: 95px;
+    }
+    .packAge_l_b{
+       background: #fff;
+      height: 100%;
+      border:1px solid #dddddd;
+     padding: 0 3%;
+      border-radius: 5px;
+      position: relative;
+    }
+    .packAge_l_b h3{
+      line-height: 24px;
+      font-size: 18px;
+      padding-top:28px;
+    }
+    .packAge_l_b p{
+      
+      color: #cacaca;
+      line-height: 20px;
+    }
+    .l_position{
+      position: absolute;
+      display: inline-block;
+      background-repeat: no-repeat;
+     background-size: 100%;
+     width: 11px;
+     height: 100px;
+     right: -5px;
+     top:-1px;
+     z-index: 10;
+     background-position: 0 0;
+    }
+    .l_position_now{
+     
+      background-image: url(../img/jc_blue.png);
+     
+    }
+    .l_position_done{
+      background-image: url(../img/jc_grey.png);
+    }
+
+    .packAge_r{
+      position: absolute;
+      right: 0;
+      top:0;
+      width: 95px;
+      background: #60bbf4;
+      height: 100%;
+      border-radius: 5px;
+      z-index: 5
+      
+    }
+    .packBlue{
+      background: #60bbf4;
+    }
+    .packOrange{
+      background: #fb6e52;
+    }
+    .packGrey{
+    	background: #cccccc;
+    }
+    .packAge_r span.J_mark{
+      border:1px solid #fff;
+      color: #fff;
+      display: inline-block;
+      padding:0 3px;
+      margin-top:20px;
+      margin-left:12px;
+      border-radius: 5px;
+      line-height: 18px;
+    }
+    .packAge_r p{
+      color: #fff;
+      font-size: 36px;
+      text-align: center;
+    }
+    .packAge_r_b{
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    .hasUsed{
+ 		background-position:  0 0;
+ 		position: absolute;
+     display: inline-block;
+     background-image: url(../img/packMark.png);
+     background-repeat: no-repeat;
+     background-size: 100%;
+     width: 70px;
+     height: 70px;
+     top:-19px;
+     z-index: 11;
+     right: 105px;
+    }
+    .overTime{
+    	position: absolute;
+     display: inline-block;
+     background-image: url(../img/packMark.png);
+     background-repeat: no-repeat;
+     background-size: 100%;
+     width: 70px;
+     height: 70px;
+     top:-19px;
+     z-index: 11;
+     right: 105px;
+    	background-position:  0 -70px;
+    }
+    .xc_tit em{
+    	font-size: 12px;
+    }
+    .hide{
+    	display: none;
+    }
+    /*卡券包详情*/
+   .pk_head{
+        text-align: center;
+        background: #fff;
+        padding:15px 0;
+        border-bottom: 1px solid #dddddd;
+      }
+      .pk_head .pk_tit{
+        font-size: 24px;
+      }
+      .pk_img{
+      	margin:10px auto;
+        width: 244px;
+        height: 244px;
+        color: #ccc;
+        line-height: 244px;
+      }
+      .pk_img img{
+        width: 244px;
+      }
+      .pk_number,.pk_time{
+        line-height: 22px;
+      }
+      .pk_number{
+      	font-size: 14px;
+      }
+      .pk_cont{
+        background: #fff;
+        border-bottom: 1px solid #dddddd;
+        border-top: 1px solid #dddddd;
+        margin:10px 0;
+        
+        position: relative;
+      }
+      .pk_mark{
+        position: absolute;
+        background: url(../img/m.png) no-repeat;
+        display: inline-block;
+        width: 8px;
+        height: 25px;
+        left: 0;
+        top:10px;
+        background-size: 100%
+      }
+      .cont_tit{
+        color: #000;
+        font-size: 16px;
+        line-height: 24px;
+         padding:10px 16px;
+         border-bottom: 1px solid #eeeeee;
+      }
+      .cont_box{
+      	margin-top:15px;
+      	padding-bottom: 25px;
+      }
+      .cont_txt{
+        line-height: 20px;
+        padding:0 16px;
+        font-size: 14px;
+      }
+
+    .storeItem{
+      border-bottom: 1px solid #eeeeee;
+      padding:10px 16px;
+    }
+    .storeItem:last-child{
+      /*border-bottom: 0 none;*/
+    }
+    .storeName{
+      color: #000;
+       line-height: 24px;
+       font-size: 14px;
+    }
+    .storeAddress{
+      line-height: 24px;
+      color: #666;
+    }
+    .loading{
+      text-align: center;
+      position: fixed;
+      top:40%;
+      left:0;
+      width: 100%;
+      padding:10px 0;
+      img {
+        width: 40px;
+        height: 40px;
+        display: inline;
+      }
+    }
+    .noPackageData{
+      position: fixed;
+      top:20%;
+      left:0;
+      width: 100%;
+      text-align: center;
+      img{
+        width: 101px;
+      }
+      p{
+        padding-top: 14px;
+        font-size: 16px;
+        color: #2c2c2c;
+      }
+    }
+    .cardFixPic{
+      position: fixed;
+      bottom: 0;
+      left:0;
+      width: 100%;
+      z-index: 1002;
+      img{
+        width: 100%;
+        vertical-align:middle;
+      }
+    }
+    .storeMore{
+      text-align: center;
+      padding:15px 0;
+      color: #666;
+    }
+    

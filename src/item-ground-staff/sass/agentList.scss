@@ -1,0 +1,246 @@
+.underNameAgent,.noActiveAgent,.websiteAgentList,.centerAgent,.centerWebsite{
+	.title{
+	    position: fixed;
+		height: 56px;
+		width:100%;
+		padding: 0 3%;
+		background: #fff;
+		line-height: 56px;
+		z-index:1500;
+	}
+	.listSearch{
+		position: fixed;
+	    background: #c8c8cd;
+	    padding: 8px 12px;
+	    width: 100%;
+	    top: 0;
+	    left: 0;
+	    z-index: 1000;
+		.searchMenu{
+			position: relative;
+    		height: 36px;
+ 			.searchInput{
+ 				background-color: #fff;
+			    border-radius: 5px;
+			    width: 100%;
+			    position: absolute;
+			    height: 36px;
+			    top: 0;
+			    left: 0;
+			    text-align: center;
+			    z-index: 10;
+ 			}
+ 			.typeSearch{
+                display: none;
+			    border: 0 none;
+			    margin-left: 1%;
+			    width: 98%;
+			    padding-left: 25px;
+    			outline: 0;
+			    height: 36px;
+    			line-height: 36px;
+            }
+ 			.searchRemind{
+ 				position: relative;
+ 				line-height: 36px;
+ 			}
+ 			.cancelSearch{
+	            float: right;
+	            line-height: 36px;
+	            width: 10%;
+	            height: 36px;
+	            text-align: center;
+	         }
+ 			.searchInputShow{
+	            .searchRemind{
+	              	display: none;
+	            }
+	            .svg2{
+	            	display: block;
+	            }
+	            input.typeSearch{
+	              	display: block;
+	            }
+	        }
+	        .hide{
+		        display: none;
+		    }
+		    .svg1{
+		    	position: absolute;
+		    	width: 0.75rem;
+		    	height: 0.75rem;
+		    	top:1px;
+		    	left: -15px;
+		    	fill: #999;
+		    }
+		    .svg2{
+		    	display: none;
+	    	    position: absolute;
+			    width: 0.75rem;
+			    height: 0.75rem;
+			    top: 10px;
+			    left: 10px;
+			    fill: #999;
+		    }
+
+		}
+	}
+	.agentContent{
+		position: absolute;
+		top:52px;
+		left: 0;
+		width: 100%;
+		background-color: #ffffff;
+	}
+	.agentType{
+		height: 40px;
+		width: 100%;
+		background-color: #ffffff;
+		overflow: hidden;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        z-index:500;
+		.typeUl{
+		    position: relative;
+		    z-index: 1101;
+		    height: 40px;
+		    overflow: hidden;
+		    line-height: 40px;
+		    float: left;
+		    width: 1000px;
+		    li{
+	    	    height: 100%;
+			    float: left;
+			    padding: 0 0.6rem;
+		    }
+		    p{
+			   	padding: 0 .2rem;
+			   	height: 100%;
+		    }
+		    .selected{
+		    	p{
+		    		border-bottom: 2px solid #2c9afe;
+		    		color: #2c9afe;
+		    	}
+		    }
+		}
+	}
+	.agentList{
+		width: 100%;
+		background-color: #ffffff;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+		.everyAgent{
+			position: relative;
+		    margin-left: 3%;
+		    padding-right: 3%;
+		    height: 48px;
+		    .info{
+		    	width: 33%;
+		    	padding-right: 7%;
+		    	line-height: 48px;
+   				height: 48px;
+   				white-space: nowrap;
+		    	overflow: hidden;
+                text-overflow: ellipsis;
+               	display: inline-block;
+               	vertical-align: top;
+		    }
+		    .info:nth-child(2){
+		    	width: 27%;
+		    }
+		    .info:nth-child(3){
+		    	width: 40%;
+		    }
+		    .direction{
+		    	display: inline-block;
+		    	width: 10px;
+		    	height: 10px;
+		    	border-top: 2px solid #dddddd;
+		    	border-right: 2px solid #dddddd;
+		    	position: absolute;
+			    right: 3%;
+			    top: 19px;
+			    -webkit-transform: rotate(45deg);
+			    transform: rotate(45deg);
+		    }
+		}
+		.everyAgent:last-child::before{
+			display: none;
+		}
+		.noAgentData{
+			text-align: center;
+			padding-top: 20%;
+			.noAgentImg{
+				width: 44%;
+			    padding: 18.65% 0;
+			    margin: 0 auto;
+			    p{
+					margin-top:15px;
+				}
+			}
+			img{
+		    	left: 0;
+		    	top: 0;
+		    }
+		    button{
+		    	width: 130px;
+		    	height: 39px;
+		    	margin-top: 15px;
+		    	border-radius: 5px;
+	    	}
+	    	.txt{
+	    		 margin-top: 20px;
+	    	}
+	    	&.none{
+	    		display: none;
+	    	}
+		}
+	}
+}
+.noActiveAgent{
+	.agentList{
+	    position: absolute;
+	    top: 56px;
+	    left: 0;
+	    width: 100%;
+	    overflow: auto;
+	    -webkit-overflow-scrolling: touch;
+	}
+}
+.centerAgent{
+	.agentList{
+		.everyAgent{
+			.info:nth-child(2){
+		    	width: 31%;
+		    }
+		    .info:nth-child(3){
+		    	width: 36%;
+		    }
+		}
+	}
+}
+.websiteAgentList{
+	.title{
+		position:relative;
+	}
+	.submitAgentList{
+		margin-bottom: 10px;
+	}
+	.websiteAgentFooter{
+		position: fixed;
+		bottom:0;
+		left: 0;
+		width: 100%;
+		height: 56px;
+		input{
+			width: 50%;
+			height: 100%;
+			border:0;
+			outline: 0;
+		}
+		input:nth-child(1){
+			padding-left: 3%;
+		}
+	}
+}

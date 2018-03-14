@@ -1,0 +1,51 @@
+.centerAgent,.centerWebsite{
+	.title{
+	    position: fixed;
+		height: 56px;
+		width:100%;
+		padding: 0 3%;
+		background: #fff;
+		line-height: 56px;
+		z-index:1500;
+	}
+	.centerAgentBox,.centerWebsiteBox{
+		position: absolute;
+		top:56px;
+		left: 0;
+		width: 100%;
+		 overflow: auto;
+        -webkit-overflow-scrolling: touch;
+	}
+	
+	.websiteList{
+		width: 100%;
+		background: #fff;
+		.everyWebsite{
+			position: relative;
+		    padding:0 3%;
+		    height: 48px;
+		    .info{
+		    	padding-right: 7%;
+		    	line-height: 48px;
+   				height: 48px;
+               	display: inline-block;
+               	vertical-align: top;
+		    }
+		    .right{
+		    	float: right;
+		    }
+		}
+	}
+	.direction{
+    	display: inline-block;
+    	width: 10px;
+    	height: 10px;
+    	border-top: 2px solid #dddddd;
+    	border-right: 2px solid #dddddd;
+    	position: absolute;
+	    right: 3%;
+	    top: 19px;
+	    -webkit-transform: rotate(45deg);
+	    transform: rotate(45deg);
+    }
+}

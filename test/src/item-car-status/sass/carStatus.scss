@@ -1,0 +1,589 @@
+.carStatus{
+	display: flex;
+	flex-direction: column;
+	justify-content:space-between;
+	opacity: 0;
+	/*顶部7种状态*/
+	.carStatusTop{
+		width: 100%;
+		background-color: #2592f8;
+		padding: 16px 0 ;
+		margin-bottom: 12px;
+		position: relative;
+		.carNumber{
+			text-align: center;
+			color: #fff;
+			font-weight: 400;
+			height: 1.5rem;
+		}
+		.changeCar{
+			position: absolute;
+			right: 16px;
+			top: 16px;
+			width: 24px;
+			height: 24px;
+			fill:#fff;
+		}
+		/*车辆状态进度条*/
+		.carStatusBox{
+		    width: 100%;
+		    overflow-x: auto;
+		    overflow-y:hidden;
+    		-webkit-overflow-scrolling: touch;
+    		pointer-events: auto;
+    		.carStatusSchedule{
+			    width: 60rem;
+			    height: 7rem;
+			    margin-top: 1rem;
+				.carStatusScheduleItem{
+					width: 5.55556rem;
+					float: left;
+					position: relative;
+					/*第一个li*/
+					&.first{
+    					width: 7.85rem;
+    					height: 6px;
+    					.linear{
+    						width:102.5%;
+						    left: 0;
+    					}
+    					.linearMask{
+    						width: 0;
+							left: 0rem;
+						}
+					}
+					&.last{
+    					width: 4rem;
+    					height: 6px;
+    					.linear{
+    						width:100%;
+    						left: 0;
+    					}
+    					.linearMask{
+    						width: 0;
+							left: 0rem;
+						}
+					}
+					/*当前的状态*/
+					&.current{
+						width: 8.4rem;
+						left: -1px;
+						.statusSvg{
+						    position: relative;
+		    				z-index: 1;
+							fill: #ffd862;
+							width: 5.1rem;
+							height:5.7rem;
+						}
+						.linear{
+							left: 4.8rem;
+						}
+						.linearMask{
+							left: 4.8rem;
+						}
+						.statusName{
+							color: #ffd862;
+							left: 1rem;
+    						top: 6rem;
+						}
+					}
+					.statusSvg{
+					    position: relative;
+	    				z-index: 1;
+						fill: #004a90;
+						width: 1.956rem;
+						height:5.7rem;
+					}
+					.statusName{
+						display: inline-block;
+						text-align: center;
+						position: absolute;
+						color: #004a90;
+						font-style: normal;
+						left: -.45rem;
+						top: 3.8rem
+					}
+					/*默认的线条*/
+					.linear{
+						width: 3.9rem;
+						height: 6px;
+						top: 2.7rem;
+						left: 1.8rem;
+						position: absolute;
+						background: #165895;
+						display: inline-block;
+					}
+					/*有颜色的线条*/
+					.linearMask{
+						width:0rem;
+						height: 6px;
+						position: absolute;
+						top: 2.7rem;
+						left: 1.8rem;
+						background: #ffd862
+					}
+				}
+				
+    		}
+		}
+	}
+	.carStatusContent{
+		.line{
+			padding-top: 1px;
+			border-top: 2px solid #2c2c2c;
+			border-bottom: 1px solid #2c2c2c;
+		}
+		/*车辆待预约*/
+		.carReservation{
+			.reservationBox{
+			    position: relative;
+    			top: -70px;
+				width: 94%;
+				margin: 0 3% -70px 3%;
+				border:0;
+				border-radius: 5px;
+				background: #ffffff;
+				padding: 14px 20px 0 20px ;
+				box-shadow: 0 3px 1px #ced1d7;
+				.reservationCity,.locationTitle{
+					height: 42px;
+					line-height: 42px;
+				}
+				.reservationCity{
+					svg{
+						width: 18px;
+						height: 22px;
+						margin-right: 5px;
+					    vertical-align: sub;
+					}
+					span:nth-child(2){
+						float:right;
+					}
+				}
+				.locationTitle{
+					margin-top: 15px;
+				}
+				.location{
+					height: 48px;
+					line-height: 48px;
+				}
+				.noLocation{
+					padding: 10px 0;
+				}
+			}
+			.footerButton{
+				position: fixed;
+				bottom:0;
+				width: 100%;
+				height: 56px;
+				background: #fff;
+				text-align: center;
+				a{
+					display: inline-block;
+					height: 40px;
+					width: 94%;
+					background-color: #2c9afe;
+					color: #fff;
+					line-height: 40px;
+					margin-top: 8px;
+					border-radius: 5px;
+				}
+			}
+		}
+		/*车辆检测中*/ /*车辆检测安排_专属检测师*/
+		.carDetection,.carArrangeDetection{
+			.detectionImgBox{
+				position: relative;
+				width: 94%;
+				margin: 0 3% 12px 3%;
+				padding:34px 0 32px 0;
+				border:0;
+				border-radius: 5px;
+				background: #ffffff;
+				box-shadow: 0 3px 1px #ced1d7;
+				.word{
+					margin-top: 15px;
+					text-align: center;
+				}
+				.detectionImg{
+					width: 39.72%;
+					padding:19.86% 0;
+					margin: 0 auto;
+				}
+				img{
+				    top: 0px;
+				}
+				.searchImg{
+					width: 100%;
+				}
+				.avatar{
+					position: absolute;
+					width: 19.3%;
+				    right: 34%;
+	    			top: 25%;
+	    			animation:spin 1.5s infinite linear;
+				}
+
+				@keyframes spin{
+					from{
+						transform:translate(50%,65%) rotate(0turn) translate(-50%,-65%) translate(50%,50%) rotate(1turn) translate(-50%,-50%);
+					}
+					to{
+						transform:translate(50%,65%) rotate(1turn) translate(-50%,-65%) translate(50%,50%) rotate(0turn) translate(-50%,-50%);
+					}
+				}
+			}
+			.testEngineer{
+				position: relative;
+				width: 94%;
+				margin: 0 3% 12px 3%;
+				padding:20px 5.7%;
+				border:0;
+				border-radius: 5px;
+				background: #ffffff;
+				box-shadow: 0 3px 1px #ced1d7;
+				p{
+					line-height: 2;
+				}
+				.titlePart{
+					padding:20px 0;
+					z-index:1;
+					.leftPic{
+						display: inline-block;
+						width: 22%;
+						vertical-align: middle;
+					}
+					.centerPicMenu{
+					    width: 88%;
+			    		padding: 44% 0;
+					    img{
+					    	top: 0px;
+					    	border-radius: 50%;
+					    	background-color: #ffffff;
+					    	border: 1px solid #e0e0e0;
+					    }
+					}
+					.rightWord{
+						display: inline-block;
+						margin-left: 2%;
+					    vertical-align: middle;
+					    line-height: 1.5;
+					    width: 76%;
+				    }
+					.centerIcon{
+						width: 16%;
+						padding-top: 50%;
+					}
+				}
+				.rateLine{
+					position: relative;
+					z-index:2;
+					span{
+						padding: 0 15px;
+						background-color: #fff;
+						position: absolute;
+						left: 50%;
+						top:-1.125rem;
+						transform: translate(-50%,-50%);
+					}
+				}
+				button{
+					width: 100%;
+					height: 48px;
+				}
+				.centerName{
+					display: inline-block;
+				}
+				.starNumUl{
+					margin-left: 7px;
+					display: inline-block;
+				    vertical-align: text-top;
+				}
+				.starNum{
+					margin: 0 4px;
+				    float: left;
+				    list-style: none;
+					width: 14px;
+					height: 14px;
+					background: url(../img/star.png) no-repeat;
+					background-size: 100%;
+				}
+
+				/*选择星星打分*/
+				.score{
+					margin-top: 3px;
+					lable{
+						margin-right: 14.5px;
+					}
+					.scoreDiv{
+						margin: 19px 0;
+					}
+				}
+				.choseStarUl {
+					display: inline-block;
+				  	padding-left: 0;
+				  	overflow: hidden;
+				  	vertical-align: bottom;
+					.choseStarNum{
+						margin: 0 5.5px;
+						float: left;
+						list-style: none;
+						width: 22px;
+						height: 22px;
+						background: url(../img/star.png) no-repeat;
+						background-size: 100%;
+						a{
+							display: block;
+							width: 100%;
+							padding-top: 23px;
+							overflow: hidden;
+						}
+						&.light{
+							background-position: 0 -22px;
+						}
+					}
+
+				}
+			}	
+		}
+		/*车辆竞拍中*/
+		.carTheAuction,.carPrice,.carDetail{
+			position: relative;
+			width: 94%;
+			margin: 0 3% 12px 3%;
+			padding:20px 5.7%;
+			border:0;
+			border-radius: 5px;
+			background: #ffffff;
+			box-shadow: 0 3px 1px #ced1d7;
+			.floatRight{
+				float: right;
+			}
+			.line{
+				margin-top: 3px;
+			}
+			i{
+				padding: 2px;
+				margin: 2px;
+				font-style: normal;
+				border: 1px solid #999;
+				border-radius: 5px;
+			}
+			p{
+				text-align: center;
+			}
+			.priceWord{
+				margin-top: 30px;
+			}
+			.priceNum{
+				font-size: 1.875rem;
+			}
+		}
+		/*竞拍结束*/
+		.carEndAuction{
+			padding-bottom: 56px;
+			.bottomTel{
+				position: fixed;
+				left: 0;
+				bottom:0;
+				background: #fff;
+				width: 100%;
+				height: 56px;
+				.status1,.status3{
+					height: 40px;
+					color: #fff;
+					background: #2592f8;
+					display: block;
+					width: 94%;
+					margin:8px auto;
+					text-align: center;
+					line-height: 40px;
+					border-radius: 5px;
+				}
+				.status2{
+					height: 40px;
+					width: 94%;
+					margin:8px auto;
+					a{
+						display: inline-block;
+						width: 48.5%;
+						height: 100%;
+						border-radius:5px;
+						line-height: 20px;
+						text-align: center;
+					}
+					a:nth-child(1){
+						margin-right: 1.5%;
+						border:1px solid #e2e2e2;
+						p:nth-child(1){
+							margin-top: 1px;
+						}
+					}
+					a:nth-child(2){
+						margin-left:1.5%;
+						float: right;
+						background: #2c9afe;
+						line-height: 40px;
+						color: #fff;
+					}
+				}
+			}
+			.carPrice{
+				margin-bottom: 10px;
+			}
+			.carDetail{
+				padding: 8.5px 5.7%;
+				.detailTitle{
+					line-height: 2;
+				}
+				.arrow{
+					display: inline-block;
+			        width: 10px;
+			        height: 10px;
+			        border-right: 2px solid #e0e0e0;
+			        border-bottom: 2px solid #e0e0e0;
+			        position: relative;
+			        bottom: -10px;
+			        right: 5px;
+			        background: #ffffff;
+			        transform: rotate(45deg);
+			        -webkit-transform: rotate(-135deg);
+				}
+				.arrow.expand{
+					display: inline-block;
+			        width: 10px;
+			        height: 10px;
+			        border-right: 2px solid #e0e0e0;
+			        border-bottom: 2px solid #e0e0e0;
+			        position: relative;
+			        bottom: -6px;
+			        right: 5px;
+			        background: #ffffff;
+			        transform: rotate(45deg);
+			        -webkit-transform: rotate(45deg);
+				}
+				.detailInfo{
+					margin-top: 10px;
+				    width: 100%;
+				    padding-top: 15px;
+				    .carImg{
+				    	width: 30%;
+					    padding: 11.3% 0;
+					    float: left;
+				    }
+				    img{
+			    	    top: 0px;
+				    }
+				    .carDes{
+			    	    position: relative;
+					    padding: 11.3% 0;
+					    width: 70%;
+					    float: right;
+				    }
+				    .des1{
+					    position: absolute;
+					    top: 0;
+					    left: 0;
+					    margin: 3px 0 0 10px;
+					    overflow: hidden;
+					    text-overflow: ellipsis;
+					    display: -webkit-box;
+					    -webkit-line-clamp: 2;
+					    -webkit-box-orient: vertical;
+					    text-align: left;
+				    }
+				    .des2{
+					    position: absolute;
+					    bottom: 0;
+					    left: 0;
+					    margin: 3px 0 0 10px;
+					    text-align: left;
+				    }
+				    .carInfoP{
+				    	text-align: left;
+				    	line-height: 48px;
+				    	height: 48px;
+				    }
+				 	.carNum{
+				 		margin-top: 15px;
+				 	}
+				 	&.none{
+						display: none;
+					}
+				}
+
+			}
+		}
+		/*预约交易*/ /*车辆检测安排_预约信息*/
+		.carReservationDeal,.carArrangeDetection{
+			position: relative;
+			.dealBox{
+				width: 94%;
+				margin: 0 3%;
+				border:0;
+				border-radius: 5px;
+				background: #ffffff;
+				padding: 0 20px ;
+				box-shadow: 0 3px 1px #ced1d7;
+			}
+			.dealInfo{
+				position: relative;
+				top:-70px;
+				margin-bottom: -70px;
+				z-index:1;
+				p{
+					height: 56px;
+					line-height: 56px;
+				}
+			}
+			.dealMaterial{
+				margin-top: 15px;
+				padding: 17px 5.7% 20px 5.7%;
+				svg{
+				    width: 16px;
+				    height: 16px;
+				    vertical-align: middle;
+				    margin-right: 12px;
+				}
+				p{
+					line-height: 2;
+				}
+				ul{
+					margin-top: 15px;
+					li{
+						line-height: 1.8;
+					}
+				}
+			}	
+		}
+		/*车辆检测安排*/
+		.carArrangeDetection{
+			.testEngineer{
+				margin-top: 14px;
+				padding: 20px 5.7% 0 5.7%;
+			}
+		}
+		/*交易成功*/
+		.carDealSuccess{
+			text-align: center;
+			.dealbox{
+				width: 94%;
+				margin: 0 3%;
+				border:0;
+				border-radius: 5px;
+				background: #ffffff;
+				padding: 15px 20px ;
+				box-shadow: 0 3px 1px #ced1d7;
+			}
+			.successDealImg{
+				width: 65.7%
+			}
+			button{
+				width: 100%;
+				height: 48px;
+				margin-top: 40px;
+			}
+		}
+	}
+}
+

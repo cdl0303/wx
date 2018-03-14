@@ -1,0 +1,111 @@
+{
+    "code": 200,
+    "message": "ok",
+    "data": {
+        "invoice": null,
+        "deliver": [
+            {
+                "pcustID": 60832,
+                "deliverID": 1633,
+                "provinceName": "浙江省",
+                "cityName": "宁波市",
+                "countyName": "海曙区",
+                "provinceid": 12,
+                "cityid": 125,
+                "countyid": 2207,
+                "address": "默认地址",
+                "custName": "默认",
+                "postalCode": null,
+                "mobile": "13777777777",
+                "phone": ""
+            }
+        ],
+        "send": {
+            "9": {
+                "sendTypeID": 6,
+                "sendTypeName": "客户自提",
+                "send_region_id": 9,
+                "send_region_name": "客户自提",
+                "description": "客户自提",
+                "ziti": 1
+            }
+        },
+        "branch": [
+            {
+                "creator": "admin",
+                "createTime": "2013-11-13 13:52:25",
+                "branch_id": 10000001,
+                "branch_name": "广友超市-藕池天地-鄞西区",
+                "branch_code": "nb0012",
+                "principal": "黄国美",
+                "provinceName": "浙江省",
+                "cityName": "宁波市",
+                "countyName": "鄞州区",
+                "address": "宁波市鄞州区古林镇藕池天地小区7号",
+                "address_show": "宁波市鄞州区古林镇藕池天地小区7号",
+                "mobile": "",
+                "phone": "88267827",
+                "logo": "",
+                "vehicle_id": 4,
+                "useFlg": 1,
+                "longitude": "121.515343",
+                "latitude": "29.847124"
+            },
+            {
+                "creator": "admin",
+                "createTime": "2013-11-13 13:55:12",
+                "branch_id": 10000002,
+                "branch_name": "金荣烟酒商行-幸福家园-鄞西区",
+                "branch_code": "nb0018",
+                "principal": "黄金荣",
+                "provinceName": "浙江省",
+                "cityName": "宁波市",
+                "countyName": "鄞州区",
+                "address": "宁波市鄞州区启运路11弄幸福家园",
+                "address_show": "宁波市鄞州区启运路11弄幸福家园",
+                "mobile": "13777111128",
+                "phone": "",
+                "logo": "",
+                "vehicle_id": 4,
+                "useFlg": 1,
+                "longitude": "121.497995",
+                "latitude": "29.852837"
+            }
+        ],
+        "freight": "0.00",
+        "pay": [
+            {
+                "sendTypeID": 6,
+                "type": 2,
+                "list": [
+                    {
+                        "payTypeID": 30,
+                        "payTypeName": "支付宝",
+                        "logo_img": "/postsystem/docroot/images/system/A4E9CFEA3F3BD9222E2DA32734575694.png",
+                        "memo": "支付宝",
+                        "useFlg": 1,
+                        "type": 2,
+                        "payment_platform": 2,
+                        "external_id": 123
+                    }
+                ]
+            }
+        ],
+        "log": {
+            "pcustID": 60832,
+            "deliverID": 1633,
+            "send_region_id": 9,
+            "payTypeID": 30,
+            "pay_type": 2,
+            "payment_method_id": 0,
+            "invoiceID": 0,
+            "send_time_id": 0,
+            "extend_1": null,
+            "extend_2": null,
+            "extend_3": null,
+            "extend_4": null,
+            "extend_5": null,
+            "extend_6": null
+        }
+    }
+}

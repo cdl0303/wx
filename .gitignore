@@ -1,0 +1,8 @@
+dist
+node_modules
+npm-debug.log
+quote
+item-test
+ftpsync.settings
+symbol.svg
+server.config.js

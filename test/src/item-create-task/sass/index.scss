@@ -1,0 +1,38 @@
+@import "../../base-common/css/common";
+
+$padding:7px;
+$border:1px solid #ddd;
+$borderRadius:4px;
+
+body{
+	background-color:#eee;
+}
+.wrap .btn{
+    width:100%;
+    padding:8px 0;
+    border-radius:$borderRadius;
+    transition: background-color 0.3s;
+}
+.wrap .btn.once-again{
+	background-color:green;
+}
+
+.wrap .input-text,
+.wrap .select-text,
+.wrap .textarea-text{
+	border:$border;
+	padding-top:$padding;
+	padding-bottom:$padding;
+	border-radius:$borderRadius;
+	color:#666;
+}
+
+.wrap .textarea-text{
+	height:100px;
+}
+
+@import "./routeIndex.scss";
+@import "./routeInputNumber.scss";
+@import "./routeInputTaskDetail.scss";
+@import "./routeSuccess.scss";
+
